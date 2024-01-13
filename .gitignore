@@ -1,0 +1,35 @@
+# .gitignore
+
+# Ignore database files
+db.sqlite3
+
+# Ignore migration files
+**/migrations/
+
+# Ignore environment-related files
+.env
+venv/
+env/
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Ignore the local settings file
+local_settings.py
+
+# Ignore logs and temporary files
+logs/
+*.log
+*.pot
+*.pyc
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+
+# Ignore Docker-related files
+Dockerfile
+docker-compose.yml
