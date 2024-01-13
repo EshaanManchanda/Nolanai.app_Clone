@@ -31,8 +31,8 @@
 ``` python manage.py runserver ```
 
 ## Home page
-<img src="./assets/output/home.jpg" alt="Home page of Nolanaiapp" height="50%"/>
+<img src="./assets/output/home.jpg" alt="Home page of Nolanaiapp" width="50%"/>
 ## Create Script page
-<img src="./assets/output/createscriptpage.jpg" alt="create script page of Nolanaiapp" weight="50%"/>
+<img src="./assets/output/createscriptpage.jpg" alt="create script page of Nolanaiapp" width="50%"/>
 ## script page
-<img src="./assets/output/script.jpg" alt="script page of Nolanaiapp" weight="50%"/>
+<img src="./assets/output/script.jpg" alt="script page of Nolanaiapp" width="50%"/>
