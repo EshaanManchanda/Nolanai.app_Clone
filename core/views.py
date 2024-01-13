@@ -49,30 +49,12 @@ def generate_script(title, plot):
         print("No API key.")
         return "No API key."
 
-    script_metadata = ""
-    script_metadata += f"Title: {title}\n\n"
-    script_metadata += "Plot:\n"
-    script_metadata += f"{plot}\n\n"
-
     request = """
-    This is a script generation application.
-    """ , script_metadata , """
-    The script should contain 1 initial scenes and a list of characters.
-    Do provide the complete dialogues and detailed descriptions and arrange them into specific the dictionary.
-    Reply in json DiCTIONARY format: {
-        "script": "Script content",
-        "scene_headings":"List of all screen_headings used in the script in proper order",
-        "dialogues":"List of all dialogues used in the script along with the charcters  speakking them",
-        "scene_breakdown":"Scene breakdown based on scene headings that aligns the elements of 
-        the above lists to make a scene making a proper arrangement of the action_lines list elements ,
-        dialogues list elements ,and shots  list elements(Use list indexing along with the list names  only)",
-        "shots ":"dictionary with scene_headings  as key and the shot as the value",
-        "descriptive_lines":"List of all lines that dont fit into the above lists used in the script in proper order",
-        "Characters": "List of characters"
-    }
-    The response should only contain this Dictionary.
-    No part of the script should be left out of the dictionary
-    you should use basic screenplay formatting.
+    Generate a script for a movie with the title""" +title +"""and the following plot:
+
+"""+plot+"""
+
+The script should include key scenes, dialogues, and character interactions.
     """
     print("IN GENERATE ", request)
 
@@ -84,7 +66,7 @@ def query(request):
     response = openai.Completion.create(
         engine="davinci-002",
         prompt=request,
-        max_tokens=1500,
+        max_tokens=1000,
         n=1,
         stop=None,
         temperature=0.2
@@ -92,7 +74,7 @@ def query(request):
     #print(response)
 
     if response.choices:
-        script = response.choices[1].text.strip().replace('\n', '\n\n')
+        script = response.choices[0].text.strip().replace('\n', '\n\n')
         print("SCRIPT \n",response)
         return script
     else:
@@ -116,7 +98,7 @@ def create_script(request):
       plot=form.cleaned_data['Plot']
       print(title , plot )
       DATA=generate_script(title, plot)
-      DATA= DATA.replace("\n", " ").replace("  ", "")
+    #   DATA= DATA.replace("\n", " ").replace("  ", "")
       print(DATA)
       script = DATA
       return render(request,"pages/Script.html",{'form':form,'title':title,'plot':plot,'script':script})
