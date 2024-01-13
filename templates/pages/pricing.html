@@ -1,0 +1,433 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Subscription / Pricing | Nolan{% endblock title %}
+{% block content %}
+<main>
+
+    <!-- First section start here -->
+    <div class="relative text-white">
+        <div class=" h-[480px]" id="pricing-image">
+            <img class="absolute inset-0 -z-30 object-cover object-top h-full w-full"
+                src="{% static 'img/hero-img-pricing copy.webp' %}" alt="hero-img-pricing ">
+            <div class="py-20 px-20">
+                <div class="">
+                    <p class="text-[#636469]">NOLANAI // PRICING</p>
+                    <div>
+                        <h1 class="text-6xl font-extrabold my-10">Pricing</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-zinc-600/100 w-fit m-auto rounded-full font-bold">
+                <button
+                    class="md:px-5 px-2 py-2 hover:bg-[#191B1F] hover:text-blue-700 rounded-full mx-3 my-1 cursor-pointer">Monthly</button>
+                <button
+                    class="md:px-5 px-2 py-2 hover:bg-[#191B1F] hover:text-blue-700 rounded-full mx-3 my-1 cursor-pointer">Every
+                    3
+                    months</button>
+                <button
+                    class="md:px-5 px-2 py-2 hover:bg-[#191B1F] hover:text-blue-700 rounded-full mx-3 my-1 cursor-pointer">Anually</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- First section end here -->
+
+    <!-- pricing Card Container -->
+    <div class="md:px-10 px-2 flex flex-wrap justify-center items-center -mt-20 mx-auto gap-10 text-white" id="pricing-card">
+
+        <!-- pricing first Card Container -->
+
+        <div class="bg-[#2B2D33] rounded-2xl flex-grow  h-[850px]" id="pricing-card1">
+            <div class="py-4 px-2 border-b-[1px] border-[#23262D]">
+                <h1 class="font-bold px-2 border-l-4 border-lime-500 text-2xl">Free Forever</h1>
+            </div>
+            <div class="border-b-[1px] border-[#23262D]">
+                <p class="px-5 py-2 text-sm xl:w-96">Get started with our free plan and enjoy essential features
+                    without any
+                    cost. Perfect for individuals</p>
+                <h2 class="text-4xl font-bold text-center my-8">$0</h2>
+            </div>
+            <div class="px-4 py-4 border-b-[1px] border-[#23262D] h-[510px]">
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> Unlimited Screenplays</p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> Automatic Cloud sync and Backup
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> History</p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> PDF and Final Draft export
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> PDF Brainstorming
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> PDF Co Pilot/AI requests
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> PDF AI Image Generations
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> PDF Storyboard
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> PDF Scheduling for 1 script
+                </p>
+
+                <a href="" class="text-sm font-bold text-blue-600 px-10 py-5">See detailed feature breakdown</a>
+            </div>
+            <div class="bg-blue-700 w-[10rem] m-auto rounded-full flex justify-center items-center my-8">
+                <button class="px-5 py-3 font-bold flex justify-center items-center gap-2 mx-auto">Subscribe <span
+                        class="material-symbols-outlined ">add_circle</span> </button>
+            </div>
+        </div>
+        <!-- pricing second Card Container -->
+
+        <div class="bg-[#2B2D33] rounded-2xl flex-grow  h-[850px]" id="pricing-card2">
+            <div class="py-4 px-2 border-b-[1px] border-[#23262D] flex justify-between items-center">
+                <h1 class="font-bold px-2 border-l-4 border-[#DA8813] text-2xl">Basic</h1>
+                <p class="text-sm font-semibold bg-[#DA8813] px-2 rounded-t-[3px]">Best Value</p>
+            </div>
+            <div class="border-b-[1px] border-[#23262D]">
+                <p class="px-5 py-2 text-sm xl:w-96">Upgrade to our Basic plan that unlocks additional functionalities
+                    with UNLIMITED AI requests.</p>
+                <h2 class="text-4xl font-bold text-center mt-8 text-[#DA8813]">$89.99</h2>
+                <p class="text-center mb-5 ">Billed every 3 month</p>
+            </div>
+            <div class="px-4 py-4 border-b-[1px] border-[#23262D] h-[510px]">
+                <p class="font-semibold">Everything included in Free Forever, plus:</p>
+
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> Screenplay Title Generations
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> Script Smart
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> Break Smart</p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> Create Scene
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> PDF Brainstorming
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> PDF and Final Draft import
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> PDF AI Image Generations
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> PDF Storyboard
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> PDF Scheduling for 1 script
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span> Storyboard with Basic AI image
+                    generation
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span>Unlimited - Scheduling</p>
+                </p>
+
+                <a href="" class="text-sm font-bold text-blue-600 px-10 py-5">See detailed feature breakdown</a>
+            </div>
+            <div class="bg-blue-700 w-[10rem] m-auto rounded-full flex justify-center items-center my-8">
+                <button class="px-5 py-3 font-bold flex justify-center items-center gap-2 mx-auto">Subscribe <span
+                        class="material-symbols-outlined ">add_circle</span> </button>
+            </div>
+        </div>
+        <!-- pricing third Card Container -->
+
+
+        <div class="bg-[#2B2D33] rounded-2xl flex-grow  h-[850px]" id="pricing-card3">
+            <div class="py-4 px-2 border-b-[1px] border-[#23262D]">
+                <h1 class="font-bold px-2 border-l-4 border-[#B11E46] text-2xl">Pro</h1>
+            </div>
+            <div class="border-b-[1px] border-[#23262D]">
+                <p class="px-5 py-2 text-sm xl:w-96">Experience the ultimate power and versatility of our Pro plan.
+                    Gain access to features, priority support.</p>
+                <h2 class="text-4xl font-bold text-center mt-8 text-[#B11E46]">$149.99</h2>
+                <p class="text-center mb-5 ">Billed every 3 month</p>
+
+            </div>
+            <div class="px-4 py-4 border-b-[1px] border-[#23262D] h-[510px] xl:w-96">
+                <p class="font-semibold">Everything included in Free Forever, plus:</p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span>ColLab: Virtual Writers' Room
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span>
+                    Plot Hole Detection Report
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span>
+                    Automatic Script Breakdown: Break down the whole script within a few minutes.</p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span>
+                    PRO AI unlimited requests
+                </p>
+                <p class="flex gap-4 items-center font-semibold mt-3"><span
+                        class="material-symbols-outlined text-lime-500">check</span>
+                    Unlimited - Scheduling + Scene Shooting Duration Estimations
+                </p>
+
+                <a href="" class="text-sm font-bold text-blue-600 px-10 py-5">See detailed feature breakdown</a>
+            </div>
+
+            <div class="bg-blue-700 w-[10rem] m-auto rounded-full flex justify-center items-center my-8">
+                <button class="px-5 py-3 font-bold flex justify-center items-center gap-2 mx-auto">Subscribe <span
+                        class="material-symbols-outlined ">add_circle</span> </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- pricing container end -->
+
+    <!-- Section 2 start here -->
+    <div class="md:p-10 p-4 my-10 flex flex-col md:flex-row justify-center items-center text-white">
+        <!-- Section 2 left part -->
+        <div class="md:w-1/2 w-full flex justify-center items-center">
+            <img src="{% static 'img/imageEnterprize.webp' %}" alt="">
+        </div>
+
+        <!-- Section 2 right part -->
+        <div class="md:w-1/2 w-full space-y-5 md:text-left text-center">
+            <h1 class="font-bold text-5xl ">Enterprise</h1>
+            <p class="text-xl ">Didn’t find the options you were looking for? If you’re a large team looking for a
+                custom solution, we’ve got you covered!</p>
+            <p class="text-lg">All features unlimited in Pro plan and custom solutions
+            </p>
+            <div class="text-center flex justify-center items-center md:block">
+                <button
+                    class="bg-blue-600 py-4 px-5 rounded-full flex justify-center items-center gap-3 font-bold text-lg">See
+                    More <span class="material-symbols-outlined ">forward_to_inbox</span></button>
+            </div>
+
+        </div>
+    </div>
+    <!-- Section 2 end here -->
+
+    <!-- Section 3 start here -->
+    <div class="wrapper text-white">
+        <div class="text-pretty text-5xl font-bold text-center">FEATURE COMPARISON</div>
+        <div class="overflow-x-auto md:px-20 px-10 py-10 w-auto flex flex-col">
+
+            <div class="flex justify-between gap-[1rem] mt-20 w-[1500px]">
+                <h1 class="font-semibold w-[600px]   text-4xl text-[#4D4E51] border-b border-zinc-600/70 py-4 px-2">Features</h1>
+                <h1 class="font-bold w-[300px]   text-4xl border-b border-zinc-600/70 py-4 px-2">Free</h1>
+                <h1 class="font-bold w-[300px]   text-4xl border-b border-zinc-600/70 py-4 px-2">Basic +</h1>
+                <h1 class="font-bold w-[300px]   text-4xl border-b border-zinc-600/70 py-4 px-2">Pro</h1>
+            </div>
+           
+            <div class="flex gap-[1rem] w-[1500px] mt-5">
+
+                <div class="font-bold  w-[600px] border-b border-zinc-600/70 py-1 px-2 ">
+                    <p> Unlimited Screenplays</p>
+                    <p class="text-[#4D4E51]"> Create as many screenplays as you want without limitation</p>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 py-2 px-2">
+                    <span class="material-symbols-outlined text-black bg-blue-600 rounded-full">check</span>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 py-2 px-2">
+                    <span class="material-symbols-outlined text-black bg-blue-600 rounded-full">check</span>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 py-2 px-2">
+                    <span class="material-symbols-outlined text-black bg-lime-500 rounded-full">check</span>
+                </div>
+            </div>
+
+
+            <div class="flex gap-[1rem] w-[1500px] items-center justify-center mt-5">
+
+                <div class="font-bold  w-[600px] border-b border-zinc-600/70 py-2 px-2 ">
+                    <p>Automatic Cloud sync and Backup</p>
+                </div>
+
+                <div class="font-bold w-[300px] text-4xl border-b  border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-black bg-blue-600 rounded-full ">check</span>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 px-2">
+                    <span class="material-symbols-outlined text-black bg-blue-600 rounded-full">check</span>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 px-2">
+                    <span class="material-symbols-outlined text-black bg-lime-500 rounded-full">check</span>
+                </div>
+            </div>
+
+            <div class="flex gap-[1rem] w-[1500px] items-center justify-center mt-5">
+
+                <div class="font-bold  w-[600px] border-b border-zinc-600/70 py-2 px-2 ">
+                    <p>History</p>
+                    <p class="text-[#4D4E51]">Access previous versions of your scripts.</p>
+                </div>
+
+                <div class="font-bold w-[300px] text-4xl border-b  border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4 pt-5">
+                        <span class="material-symbols-outlined text-black bg-blue-600 rounded-full ">check</span>
+                        <p class="font-semibold text-orange-600 text-sm">Last 3 days</p>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4 pt-5">
+                        <span class="material-symbols-outlined text-black bg-blue-600 rounded-full ">check</span>
+                        <p class="font-semibold text-orange-600 text-sm">Last 90 days</p>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 py-2 px-2">
+                    <span class="material-symbols-outlined text-black bg-lime-500 rounded-full">check</span>
+                </div>
+            </div>
+
+            <div class="flex gap-[1rem] w-[1500px] items-center justify-center mt-5">
+
+                <div class="font-bold  w-[600px] border-b border-zinc-600/70 py-2 px-2 ">
+                    <p>Screenplay Title Generations</p>
+                    <p class="text-[#4D4E51]">Ask AI change accent, continue dialogue, change ton of text</p>
+                </div>
+
+                <div class="font-bold w-[300px] text-4xl border-b  border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4 pt-6">
+                        <span class="material-symbols-outlined text-black bg-blue-600 rounded-full ">check</span>
+                        <p class="font-semibold text-orange-600 text-sm ">Basic AI 30 request per month</p>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4 -pt-5">
+                        <span class="material-symbols-outlined text-black bg-blue-600 rounded-full ">check</span>
+                        <p class="font-semibold text-orange-600 text-sm leading-4">Unlimited BASIC AI requests. Co-Pilot will analyze twice as much content as Free and Basic Plans.</p>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined text-black bg-lime-500 rounded-full">check</span>
+                    <p class="font-semibold text-orange-600 text-sm leading-4">Unlimited PRO AI requests. Co-Pilot will analyze twice as much content as Free and Basic Plans.</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="flex gap-[1rem] w-[1500px] items-center justify-center mt-5">
+
+                <div class="font-bold  w-[600px] border-b border-zinc-600/70 py-2 px-2 ">
+                    <p>Script Smart Automatically format text into a screenplay format</p>
+                </div>
+
+                <div class="font-bold w-[300px] text-4xl border-b  border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 px-2">
+                    <span class="material-symbols-outlined text-black bg-blue-600 rounded-full">check</span>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 px-2">
+                    <span class="material-symbols-outlined text-black bg-lime-500 rounded-full">check</span>
+                </div>
+            </div>
+
+            <div class="flex gap-[1rem] w-[1500px] items-center justify-center mt-5">
+
+                <div class="font-bold  w-[600px] border-b border-zinc-600/70 py-2 px-2 ">
+                    <p>Automatic Cloud sync and Backup</p>
+                </div>
+
+                <div class="font-bold w-[300px] text-4xl border-b  border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 px-2">
+                    <span class="material-symbols-outlined text-black bg-blue-600 rounded-full">check</span>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 px-2">
+                    <span class="material-symbols-outlined text-black bg-lime-500 rounded-full">check</span>
+                </div>
+            </div>
+
+            <div class="flex gap-[1rem] w-[1500px] items-center justify-center mt-5">
+
+                <div class="font-bold  w-[600px] border-b border-zinc-600/70 py-2 px-2 ">
+                    <p>PDF and Final Draft import</p>
+                </div>
+
+                <div class="font-bold w-[300px] text-4xl border-b  border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 px-2">
+                    <span class="material-symbols-outlined text-black bg-blue-600 rounded-full">check</span>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 px-2">
+                    <span class="material-symbols-outlined text-black bg-lime-500 rounded-full">check</span>
+                </div>
+            </div>
+
+            <div class="flex gap-[1rem] w-[1500px] items-center justify-center mt-5">
+
+                <div class="font-bold  w-[600px] border-b border-zinc-600/70 py-2 px-2 ">
+                    <p>History</p>
+                    <p class="text-[#4D4E51]">Access previous versions of your scripts.</p>
+                </div>
+
+                <div class="font-bold w-[300px] text-4xl border-b  border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4 pt-5">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4 pt-5">
+                        <span class="material-symbols-outlined text-black bg-blue-600 rounded-full ">check</span>
+                        <p class="font-semibold text-orange-600 text-sm ">
+                            Semi-Automatic Script Breakdown</p>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-4 -pt-5">
+                                <span class="material-symbols-outlined text-black bg-lime-600 rounded-full ">check</span>
+                                <p class="font-semibold text-white text-sm leading-4">
+                                    Automatic Script Breakdown: Break down the whole script within a few minutes.</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-[1rem] w-[1500px] items-center justify-center mt-5">
+
+                <div class="font-bold  w-[600px] border-b border-zinc-600/70 py-2 px-2 ">
+                    <p>Co Pilot/AI requests</p>
+                    <p class="text-[#4D4E51]">Ask AI change accent, continue dialogue, change ton of text</p>
+                </div>
+
+                <div class="font-bold w-[300px] text-4xl border-b  border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4 pt-6">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4 pt-6">
+                        <span class="material-symbols-outlined text-black bg-blue-600 rounded-full ">check</span>
+                        <p class="font-semibold text-orange-600 text-sm">Basic AI Unlimited scenes</p>
+                    </div>
+                </div>
+                <div class="font-bold w-[300px] text-4xl border-b border-zinc-600/70 py-2 px-2">
+                    <div class="flex items-center gap-4 pt-6">
+                        <span class="material-symbols-outlined text-black bg-lime-500 rounded-full">check</span>
+                    <p class="font-semibold text-white text-sm leading-4">PRO AI Unlimited scenes
+                    </p>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+{% endblock content %}

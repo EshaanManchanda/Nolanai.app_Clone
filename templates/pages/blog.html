@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Nolan Blog | Nolan{% endblock title %}
+{% block content %}
+<div class="h-[75vh]">
+    <div> <img class="absolute object-cover -z-30 md:w-full h-[50%] md:h-[75%]" src="{% static 'img/main.webp' %}"
+            alt="hero image for Studios"></div>
+    <div class="text-white absolute z-20 top-20 left-[5vw]">
+        <p class="md:text-7xl font-bold my-5 text-5xl">NolanAI Blog</p>
+        <p class="md:text-2xl  my-5 text-xl">Unlocking the secrets of successful screenwriting</p>
+    </div>
+</div>
+<!-- image section end here -->
+
+<!-- card container star here -->
+<div class="md:px-10 px-2 flex flex-col lg:flex-row justify-center items-center  mx-auto md:-mt-20 -mt-80  gap-10" id="card-container">
+    <!-- First card -->
+    <div class="bg-[#2B2D33] flex-grow lg:max-w-[30%] rounded-xl min-h-96 shadow-md shadow-cyan-500/75 text-white" id="card">
+        <div class="rounded-xl overflow-hidden">
+            <img class="h-60 w-full object-cover object-center" src="{% static 'img/blog/blog1.webp' %}" alt="">
+        </div>
+        <div class="md:px-8 px-5">
+            <p class="text-lg my-3 text-[#646869] font-semibold">January 10 2024, 04:30</p>
+            <h3 class="font-bold my-3 text-xl">Crafting Compelling Conversations: The Art of Movie Dialogues</h3>
+            <p class="text-sm my-3 text-[#646869] min-h-72 font-semibold leading-5">Engaging dialogue is the heartbeat of a memorable film, transcending the screen to captivate audiences and etch characters into our collective memory. In this blog post, we delve into the intricacies of crafting impactful dialogues, exploring the techniques that make them resonate and highlighting a few iconic examples from epic movies.</p>
+            <a class="text-blue-700 my-3 text-lg font-semibold" href="">Read article</a>
+        </div>
+    </div>
+   
+   
+    <!-- First card end here -->
+
+    <!-- second card -->
+    <div class="bg-[#2B2D33] flex-grow lg:max-w-[30%] rounded-xl min-h-96 shadow-md shadow-cyan-500/75 text-white" id="card">
+        <div class="rounded-xl overflow-hidden">
+            <img class="h-60 w-full object-cover object-center" src="{% static 'img/blog/blog2.webp' %}" alt="">
+        </div>
+        <div class="md:px-8 px-5">
+            <p class="text-lg my-3 text-[#646869] font-semibold">January 02 2024, 04:49</p>
+            <h3 class="font-bold my-3 text-xl">Unveiling the Most Wanted Movies of 2024!</h3>
+            <p class="text-sm my-3 text-[#646869] min-h-72 font-semibold leading-5">Despite the numerous challenges Hollywood faced in 2023, it appears that the industry has successfully overcome those obstacles. As we enter 2024, the difficulties of the past year are now in the rearview mirror, paving the way for a renewed sense of excitement. Anticipation is mounting for the upcoming release of exhilarating superhero films, a long-awaited musical adaptation, the return of George Miller to the Mad Max series, the third installment of Avatar, and a plethora of other captivating projects. Take a look at the list below to catch a glimpse of the most eagerly awaited movies of 2024, and stay tuned for updates as we continually add more to the lineup! </p>
+            <a class="text-blue-700 my-3 text-lg font-semibold" href="">Read article</a>
+        </div>
+    </div>
+    <!-- second card end here -->
+
+    <!-- third card start here -->
+    <div class="bg-[#2B2D33] flex-grow lg:max-w-[30%] rounded-xl min-h-96 shadow-md shadow-cyan-500/75 text-white" id="card">
+        <div class="rounded-xl overflow-hidden">
+            <img class="h-60 w-full object-cover object-center" src="{% static 'img/blog/blog3.webp' %}" alt="">
+        </div>
+        <div class="md:px-8 px-5">
+            <p class="text-lg my-3 text-[#646869] font-semibold">December 28 2023, 02:19</p>
+            <h3 class="font-bold my-3 text-xl">Leveraging Script Breakdown for Effective Film Scheduling</h3>
+            <p class="text-sm my-3 text-[#646869] min-h-72  font-semibold leading-5">Film </p>
+            <a class="text-blue-700 my-3 text-lg font-semibold" href="">Read article</a>
+        </div>
+    </div>
+    <!-- third card end here -->
+
+
+
+</div>
+{% endblock content %}

@@ -1,0 +1,373 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Free Script Writing Software | Nolan{% endblock title %}
+{% block content %}
+<main class="">
+    <div class="block">
+
+    <div class="block h-[135vh]">
+        <div>
+            <img class="absolute object-cover md:w-full xl:h-[110vh] h-3/4" src="{% static 'img/main.webp'%}" alt="">
+        </div>
+        <div class="w-full text-white px-5 mt-28 absolute z-20 inset-0 flex flex-col md:px-16">
+            <img class="h-20 w-40 md:h-36 md:w-72" src="{% static 'img/logo.svg'%}" alt="">
+            <div>
+                <p class="md:text-5xl font-bold my-5 text-5xl">Film Industry Service Hub</p>
+                <p class="md:text-3xl md:my-10 my-5 text-xl">Helping bring the next masterpiece to the big
+                    screens.</p>
+            </div>
+            <div class="flex gap-5">
+                <a href="{% url 'core:create_script'%}"><button class="bg-blue-600 font-bold rounded-full px-6 py-4 flex gap-4 items-center"><i
+                        class="fa-solid fa-pen"></i>Start Writing</button></a>
+                {% if user.is_authenticated%}
+                <a href="{% url 'account_logout'%}"><button class="bg-white text-black font-bold  rounded-full px-6 py-4 flex gap-4 items-center"><i
+                        class="fa-solid fa-arrow-right-to-bracket"></i>Logout</button></a>
+                        {% else %}
+                        <a href="{% url 'account_login'%}"><button class="bg-white text-black font-bold  rounded-full px-6 py-4 flex gap-4 items-center"><i
+                                class="fa-solid fa-arrow-right-to-bracket"></i>Login</button></a>
+                                {% endif %}
+            </div>
+        </div>
+
+        <div class="relative top-[70vh] xl:top-[102vh] bottom-0 left-0 right-0 space-y-5 lg:space-y-0 w-[95vw] m-auto lg:flex lg:gap-2 lg:justify-center lg:items-center"
+            id="card-container">
+            <div class="bg-[#2B2D33] m-auto lg:w-1/3 px-5 shadow-md shadow-cyan-500/50  h-max-40 rounded-2xl flex  md:justify-center md:items-center text-white"
+                id="card1">
+                <div
+                    class="bg-[#83C619] my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center">
+                    <span class="material-symbols-outlined text-4xl">auto_awesome</span>
+                </div>
+                <div class="text-white w-3/4">
+                    <h1 class="text-2xl font-semibold py-5 px-2">Editor with AI-Copilot</h1>
+                    <p class="text-lg pb-5 px-2 text-[#636469]">Enhance your screenwriting experience with AI
+                        Copilot, which suggests ideas for you.</p>
+                </div>
+            </div>
+            <div class="bg-[#2B2D33] m-auto lg:w-1/3 px-5  shadow-md shadow-cyan-500/50 h-manx-40 rounded-2xl flex  md:justify-center md:items-center text-white"
+                id="card1">
+                <div class="bg-blue-700 my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center">
+                    <span class="material-symbols-outlined text-4xl">list_alt</span>
+                </div>
+                <div class="text-white w-3/4">
+                    <h1 class="text-2xl font-semibold py-5 px-2">Automatic Script Breakdown</h1>
+                    <p class="text-lg pb-5 px-2 text-[#636469]">Script breakdown can be accomplished with a
+                        single click.</p>
+                </div>
+            </div>
+            <div class="bg-[#2B2D33] m-auto lg:w-1/3 px-5 shadow-md shadow-cyan-500/50  h-max-40 rounded-2xl flex  md:justify-center md:items-center text-white"
+                id="card1">
+                <div
+                    class="bg-[#DA8813] my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center">
+                    <span class="material-symbols-outlined text-4xl">developer_board</span>
+                </div>
+                <div class="text-white w-3/4">
+                    <h1 class="text-2xl font-semibold py-5 px-2">AI Storyboard</h1>
+                    <p class="text-lg  px-2 text-[#636469]">Automatically create shots by analyzing each scene
+                        within seconds. Generate shot images for inspiration.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="md:h-[75vh] w-full flex flex-col lg:flex-row lg:justify-center lg:items-center" id="section2">
+
+        <div class="lg:w-[35vw] w-full h-1/2 flex justify-center items-center" id="left">
+            <img class="h-80" src="{% static 'img/shield.webp'%}" alt="shield image ..">
+        </div>
+
+        <div class=" lg:w-[65vw] w-full h-1/2 text-white" id="right">
+
+            <div class="px-10 md:py-10 md:w-[90%] text-center md:text-left">
+                <h1 class="py-2 text-4xl font-bold  ">Secure</h1>
+                <h3 class="py-2 text-2xl">Don't worry, your data is secure and encryted with NOLAN</h3>
+                <p class="py-5 text-lg text-[#ADAEB0] leading-5">We take your privacy and the ownership of your
+                    work very seriously. We respect your creative content and have no rights over it. We do not
+                    use your work for training our models or for any other purposes without your explicit
+                    consent. Your scripts and content remain your intellectual property. So, when you
+                    create/upload or edit content using our software, you retain full ownership of the
+                    intellectual property. We do not claim any rights to your scripts or any other content you
+                    produce. Your creative work is yours and yours alone</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="block w-full h-[100vh] text-white" id="section3">
+        <div class="" id="image">
+            <img class="absolute w-full lg:h-full h-full object-cover"
+                src="{% static 'img/hero-img-landing-vid copy.webp'%}" alt="">
+
+            <div class="relative h-[100vh] flex flex-col xl:flex-row">
+
+                <div class="lg:w-3/4 w-full lg:p-20 lg:h-1/2 p-5">
+                    <h1 class="md:text-4xl sm:text-4xl text-3xl">Free Script Writing Software</h1>
+                    <h1 class="md:text-6xl sm:text-6xl text-6xl font-bold">And More</h1>
+                    <p
+                        class="sm:text-2xl xl:text-lg md:text-2xl md:leading-9 md:my-10  lg:my-6 my-4 text-xl leading-6">
+                        NolanAI isn't just a screenwriting tool, it's a filmmaker's dream studio. From crafting
+                        your script with AI assistance to seamlessly pre-producing your masterpiece, all within
+                        one intuitive platform, NolanAI empowers you to tell your story without losing your
+                        creative spark.<br>Imagine ditching siloed tools and having everything at your
+                        fingertips, from storyboards to shot lists, all fueled by AI smarts and user-friendly
+                        design. That's the NolanAI advantage - streamlined storytelling, from pen to production,
+                        with your unique voice always in the director's chair.</p>
+                    <button
+                        class="px-5 py-3 bg-blue-600 rounded-full font-semibold cursor-pointer hover:bg-blue-800">Explore
+                        Our premium plan <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <div class="w-full lg:h-1/2 ">
+                    <a href=""><img class="md:p-20 p-5" src="{% static 'img/dashboardBanner.webp'%}" alt=""></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="block w-full">
+        <div class="md:w-1/4 text-center m-auto text-white my-10">
+            <h1 class="font-bold text-6xl">Testimonials</h1>
+            <h3 class="font-medium text-xl text-[#636469] my-5">What Our Customer Says</h3>
+        </div>
+        <div class="bg-[#2B2D33] xl:w-[45vw] w-[90%] m-auto md:px-10 px-5 py-10 rounded-2xl text-white">
+            <div class="text-center">
+
+                <div class="flex justify-center items-center ">
+                    <img class="border border-gray-600 h-[5rem] w-[5rem] rounded-[2.5rem] object-cover outline-8 outline-white p-3 "
+                        src="{% static 'img/mike_wech.webp'%}" alt="">
+                </div>
+                <h4 class="text-3xl font-bold my-2">Mike Wech</h4>
+            </div>
+            <div class="text-[#636469] space-x-3 text-center">
+                <span>PRODUCER</span>
+                <span>EDITOR</span>
+                <span>WRITER</span>
+            </div>
+            <p class="my-10 text-xl md:text-2xl lg:text-2xl">NolanAI has the ability to be a game changer for
+                producers. What used to take
+                days could soon take hours and the technology is constantly improving. I was happy that the
+                developers were quick to address the issues and eager to learn how the program can become more
+                efficient for producers. The incorporated new features that we asked for and are eager to help
+                filmmakers streamline production. Highly recommended.</p>
+            <div class="flex justify-center items-center">
+                <img src="{% static 'img/imdb.png'%}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="text-white px-5">
+        <div class="text-center my-20 ">
+            <h1 class="text-5xl font-bold ">Meet Your Fellow Creators at NolanAI</h1>
+            <h2 class="text-2xl my-5 text-[#636469]">Fueling the Creative Fire: Where Thousands Shape Their
+                Stories
+            </h2>
+        </div>
+
+        <div class="flex flex-col w-full lg:px-10 justify-around gap-10 lg:flex-row">
+            <div class="flex justify-center items-center flex-col ">
+                <div
+                    class="w-[6rem] h-[6rem] border-[2px] border-[#2B2D33] rounded-[6rem] flex justify-center items-center">
+                    <div
+                        class="w-[4rem] h-[4rem] border-4 border-[#3C3D43] bg-[#2B2D33] rounded-[2rem] flex justify-center items-center">
+                        <!-- <i class="fa-solid fa-user"></i>
+                         -->
+                        <span class="material-symbols-outlined">
+                            supervisor_account
+                        </span>
+                    </div>
+                </div>
+                <h1 class="text-[#E4931D] font-bold text-6xl mt-8">+10000</h1>
+                <h1 class="text-4xl mt-4  font-semibold">Registered users</h1>
+            </div>
+            <div class="flex justify-center items-center flex-col ">
+                <div
+                    class="w-[6rem] h-[6rem] border-[2px] border-[#2B2D33] rounded-[6rem] flex justify-center items-center">
+                    <div
+                        class="w-[4rem] h-[4rem] border-4 border-[#3C3D43] bg-[#2B2D33] rounded-[2rem] flex justify-center items-center">
+                        <!-- <i class="fa-solid fa-user"></i> -->
+
+                        <span class="material-symbols-outlined">
+                            developer_board
+                        </span>
+                    </div>
+                </div>
+                <h1 class="text-[#E4931D] font-bold text-6xl mt-8">+3000</h1>
+                <h1 class="text-4xl mt-4  font-semibold">Storyboards created</h1>
+            </div>
+            <div class="flex justify-center items-center flex-col ">
+                <div
+                    class="w-[6rem] h-[6rem] border-[2px] border-[#2B2D33] rounded-[6rem] flex justify-center items-center">
+                    <div
+                        class="w-[4rem] h-[4rem] border-4 border-[#3C3D43] bg-[#2B2D33] rounded-[2rem] flex justify-center items-center">
+                        <!-- <i class="fa-solid fa-user"></i> -->
+                        <span class="material-symbols-outlined">
+                            summarize
+                        </span>
+                    </div>
+                </div>
+                <h1 class="text-[#E4931D] font-bold text-6xl mt-8">+180000</h1>
+                <h1 class="text-4xl mt-4  font-semibold">Scripts written
+                </h1>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-white my-32 transp md:px-20 px-5">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold ">FEATURES</h1>
+            <h2 class="text-2xl my-5 text-[#636469]">Explore what the NolanAI platform can do</h2>
+        </div>
+
+        <div class="flex flex-col-reverse gap-10 justify-center lg:flex-row items-center w-full"
+            id="section-first ">
+            <div class="text-right lg:w-1/2 w-full">
+                <div class="flex justify-end">
+                    <div
+                        class="bg-blue-700 my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center">
+                        <span class="material-symbols-outlined text-4xl">drive_file_rename_outline</span>
+                    </div>
+                </div>
+                <h1 class="md:text-4xl text-5xl font-bold">THE INDUSTRY STANDARD <br> SCRIPT WRITING <br>
+                    SOFTWARE
+                </h1>
+                <p class="text-[#636469] my-10 text-2xl lg:text-lg leading-6">Nolan provides a user-friendly
+                    interface, advanced formatting options, and helpful features such as character and scene
+                    breakdowns, revision tracking, and collaboration tools.With its powerful tools and intuitive
+                    design.</p>
+            </div>
+            <div class="lg:w-1/2 w-full lg:my-20">
+                <img class="w-full object-cover" src="{% static 'img/image1.webp'%}" alt="image..">
+            </div>
+        </div>
+
+        <div class="flex flex-col-reverse gap-10 justify-center lg:flex-row-reverse items-center w-full"
+            id="section-second ">
+            <div class="text-left lg:w-1/2 w-full">
+                <div class="flex justify-start">
+                    <div
+                        class="bg-blue-700 my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center"style="background: rgb(177, 30, 70);">
+                        <span class="material-symbols-outlined text-4xl">troubleshoot</span>
+                    </div>
+                </div>
+                <h1 class="md:text-4xl text-5xl font-bold">PLOT HOLE DETECTION <br> REPORT
+                </h1>
+                <p class="text-[#636469] my-10 text-2xl lg:text-lg leading-6">With the Plot Hole Detection
+                    Report, you can ensure the consistency and quality of your story, enhancing the overall
+                    engagement of your content. This detailed report provides actionable insights and
+                    suggestions for resolving identified issues, allowing you to fine-tune your narrative and
+                    captivate your audience with a more polished and immersive storytelling experience. Whether
+                    you're crafting a screenplay, novel, or any other form of narrative, this feature is your
+                    indispensable companion in the pursuit of storytelling excellence.</p>
+            </div>
+            <div class="lg:w-1/2 w-full lg:my-20">
+                <img class="w-full object-cover" src="{% static 'img/2.webp'%}" alt="image..">
+            </div>
+        </div>
+
+        <div class="flex flex-col-reverse gap-10 justify-center lg:flex-row items-center w-full"
+            id="section-third ">
+            <div class="text-right lg:w-1/2 w-full">
+                <div class="flex justify-end">
+                    <div
+                        class="bg-blue-700 my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center" style="background: rgb(218, 136, 19);">
+                        <span class="material-symbols-outlined text-4xl">lightbulb</span>
+                    </div>
+                </div>
+                <h1 class="md:text-4xl text-5xl font-bold">ASK NOLAN FOR <br> SUGGESTION
+                </h1>
+                <p class="text-[#636469] my-10 text-2xl lg:text-lg leading-6">To help you create high-quality
+                    story, Nolan offers a powerful editing feature. With Ask Nolan, you can easily enhance the
+                    quality of your text by highlighting the selected text,correcting any spelling and grammar
+                    errors, and adjusting the tone of the paragraph as necessary.This feature provides you with
+                    the flexibility to customize your text and make it more engaging and effective.</p>
+            </div>
+            <div class="lg:w-1/2 w-full lg:my-20">
+                <img class="w-full object-cover" src="{% static 'img/3.webp'%}" alt="image..">
+            </div>
+        </div>
+
+
+        <div class="flex flex-col-reverse gap-10 justify-center lg:flex-row-reverse items-center w-full"
+            id="section-fourth ">
+            <div class="text-left lg:w-1/2 w-full">
+                <div class="flex justify-start">
+                    <div
+                        class="bg-blue-700 my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center"
+                        style="background: rgb(177, 30, 70);">
+                        <span class="material-symbols-outlined text-4xl">translate</span>
+                    </div>
+                </div>
+                <h1 class="md:text-4xl text-5xl font-bold">CHANGE YOUR CHARACTER <br> ACCENT
+                </h1>
+                <p class="text-[#636469] my-10 text-2xl lg:text-lg leading-6">Personalize your character and
+                    make it truly unique. "Change Accent" allows you to change your character's accent, making
+                    it sound more distinct and authentic. Whether you want to add a touch of personality to your
+                    character or create a character that stands out, this feature provides you with the
+                    flexibility to customize your character's accent to match your preferences. With this
+                    feature, you can create a character that truly represents you and brings your story to life.
+                </p>
+            </div>
+            <div class="lg:w-1/2 w-full lg:my-20">
+                <img class="w-full object-cover" src="{% static 'img/4.webp'%}" alt="image..">
+            </div>
+        </div>
+
+        <div class="flex flex-col-reverse gap-10 justify-center lg:flex-row items-center w-full"
+            id="section-fifth ">
+            <div class="text-right lg:w-1/2 w-full">
+                <div class="flex justify-end">
+                    <div
+                        class="bg-blue-700 my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center" style="background: rgb(131, 198, 25);">
+                        <span class="material-symbols-outlined text-4xl">format_align_center</span>
+                    </div>
+                </div>
+                <h1 class="md:text-4xl text-5xl font-bold">SCRIPT SMART
+                </h1>
+                <p class="text-[#636469] my-10 text-2xl lg:text-lg leading-6">Script Smart uses advanced
+                    algorithms to automatically format your text into a screenplay format. With Script Smart,
+                    you can save time and focus on writing by letting the software handle the formatting for
+                    you. This feature also provides suggestions and corrections to help ensure that your
+                    screenplay adheres toindustry standards and is formatted correctly.</p>
+            </div>
+            <div class="lg:w-1/2 w-full lg:my-20">
+                <img class="w-full object-cover" src="{% static 'img/5.webp'%}" alt="image..">
+            </div>
+        </div>
+
+        <div class="flex flex-col-reverse gap-10 justify-center lg:flex-row-reverse items-center w-full"
+            id="section-sixth ">
+            <div class="text-left lg:w-1/2 w-full">
+                <div class="flex justify-start">
+                    <div
+                        class="bg-blue-700 my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center" style="background: rgb(213, 73, 39);">
+                        <span class="material-symbols-outlined text-4xl">list_alt</span>
+                    </div>
+                </div>
+                <h1 class="md:text-4xl text-5xl font-bold">BREAK SMART
+                </h1>
+                <p class="text-[#636469] my-10 text-2xl lg:text-lg leading-6">The Automatic Screenplay Breakdown
+                    (Break Smart) is a time-saving solution that simplifies the process of deconstructing a
+                    screenplay. It automatically dissects your script into key elements like scenes, characters,
+                    and locations, providing a clear and organized overview of your story's structure.</p>
+            </div>
+            <div class="lg:w-1/2 w-full lg:my-20">
+                <img class="w-full object-cover" src="{% static 'img/6.webp'%}" alt="image..">
+            </div>
+        </div>
+
+        <div class="flex justify-center items-center">
+            <button
+                class="bg-blue-600 rounded-full flex justify-center items-center gap-3 px-5 py-3 font-bold hover:bg-blue-800"><span
+                    class="material-symbols-outlined">explore</span> Explore All Features</button>
+        </div>
+    </div>
+</main>
+{% endblock content %}

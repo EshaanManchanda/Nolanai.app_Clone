@@ -1,0 +1,80 @@
+{% extends "base.html" %} 
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+{% block title %}Create Script | Nolan
+{% endblock title %} {% block content %}
+<div class="flex justify-center h-screen w-full bg-black/50 items-center">
+   <form method="POST">
+    {% csrf_token %}
+    <div class="bg-white rounded-lg">
+      <div
+        class="flex justify-between px-5 py-4 text-black/80 text-xl font-bold border-b"
+      >
+        <h1>Create a new script</h1>
+        <a href="{% url 'core:home' %}"
+          ><button
+            class="bg-gray-200 rounded-full justify-center items-center w-8 h-8"
+          >
+            <span
+              class="material-symbols-outlined text-blue-700 text-base font-bold"
+              >close</span
+            >
+          </button></a
+        >
+      </div>
+
+      <div
+        class="text-black border rounded-xl ps-5 pe-5 my-4 flex justify-between cursor-pointer mx-5 items-center"
+      >
+        <label
+          for="email"
+          class="block text-lg font-bold leading-6 text-gray-900 m-2"
+          >Title</label
+        >
+        <div class="mt-2">
+          <input
+            id="email"
+            name="title"
+            type="text"
+            required
+            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-lg sm:leading-6"
+          />
+        </div>
+      </div>
+      <div
+        class="text-black border rounded-xl ps-5 pe-5 my-4 flex justify-between cursor-pointer mx-5 items-center"
+      >
+        <label
+          for="Plot"
+          class="block text-lg font-bold leading-6 text-gray-900 m-2"
+          >Plot</label
+        >
+        <div class="mt-2">
+          <textarea
+            id="Plot"
+            name="Plot"
+            type="text"
+            required
+            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-lg sm:leading-6"
+          ></textarea>
+        </div>
+      </div>
+
+      <hr />
+      <div class="flex justify-between items-center px-10 my-5">
+        <a href="{% url "core:home"%}"><button
+          class="text-blue-700 bg-gray-300 px-5 py-2 rounded-full font-bold"
+        >
+          Cancel
+        </button></a>
+        <button
+          type="submit"
+          class="bg-blue-700 text-white px-5 py-2 rounded-full font-bold"
+        >
+          Next →
+        </button>
+      </div>
+    </div>
+  </form> 
+  {% comment %} {% crispy form %} {% endcomment %}
+</div>
+{% endblock content %}

@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}For Production Companies | Nolan{% endblock title %}
+{% block content %}
+ <!-- image section star here -->
+ <div class="image">
+    <div> <img class="absolute object-cover object-center md:w-full h-[80%]" src="{% static 'img/hero-img-for-studios.webp' %}"
+            alt="hero image for Studios"></div>
+    <div class="bg-black opacity-60 absolute inset-0 h-[80%]"></div>
+
+    <div class="text-white absolute z-20 bottom-[35vh] left-[5vw]">
+        <p class="md:text-7xl font-bold my-5 text-5xl">For Film And Entertainment</p>
+        <p class="md:text-7xl font-bold my-5 text-5xl">Production Companies</p>
+        <p class="md:text-3xl md:my-10 my-5 text-xl">All in one software for small and medium studios</p>
+    </div>
+</div>
+<!-- image section end here -->
+
+<!-- card container star here -->
+
+<div class="relative inset-0 px-2 top-[65vh] space-y-5 md:px-10 lg:flex lg:gap-4 lg:justify-center lg:items-center"
+    id="card-container">
+
+    <!-- First card -->
+
+    <div class="bg-[#2B2D33] flex-grow px-5 h-72 rounded-2xl shadow-md shadow-cyan-500/50 flex  md:justify-center md:items-center text-white"
+        id="card1">
+        <div class="bg-[#DA8813] my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center">
+            <span class="material-symbols-outlined text-4xl">psychology</span>
+        </div>
+        <div class="text-white w-3/4">
+            <h1 class="text-2xl font-bold py-5 px-2">All-in-One Editor</h1>
+            <p class="text-sm pb-5 px-2 font-semibold text-[#636469] leading-5">Experience the future of script
+                editing with our AI-powered co-pilot. Enhance your creative projects with intelligent assistance
+                that simplifies the
+                editing process, making it faster and more precise.</p>
+        </div>
+    </div>
+
+    <!-- First card end here -->
+
+    <!-- Second card -->
+    <div class="bg-[#2B2D33] flex-grow px-5 h-72 rounded-2xl shadow-md shadow-cyan-500/50 flex  md:justify-center md:items-center text-white"
+        id="card2">
+        <div class="bg-[#DA8813] my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center">
+            <span class="material-symbols-outlined text-4xl">Analytics</span>
+        </div>
+        <div class="text-white w-3/4">
+            <h1 class="text-2xl font-bold py-5 px-2">Analytics & Pre-Production Management</h1>
+            <p class="text-sm pb-5 px-2 text-[#636469] leading-5">
+                Streamline your pre-production process with comprehensive analytics. Make data-driven decisions,
+                plan your projects effectively, and ensure every element of your production is optimized for
+                success.</p>
+        </div>
+    </div>
+
+    <!-- Second card end here -->
+
+    <!-- Third card -->
+    <div class="bg-[#2B2D33] flex-grow px-5 h-72 rounded-2xl shadow-md shadow-cyan-500/50 flex  md:justify-center md:items-center text-white"
+        id="card3">
+        <div class="bg-[#DA8813] my-8 w-[5rem] h-[5rem] rounded-[5rem] flex justify-center items-center">
+            <span class="material-symbols-outlined text-4xl">waving_hand</span>
+        </div>
+        <div class="text-white w-3/4">
+            <h1 class="text-2xl font-bold py-5 px-2">Customization & Integration</h1>
+            <p class="text-sm  px-2 text-[#636469] leading-5">Tailor NolanAI to suit your studio's unique needs. Our
+                platform
+                offers seamless integration with industry-standard tools, ensuring that it fits perfectly into your
+                existing workflow.</p>
+        </div>
+    </div>
+    <!-- third card end here -->
+</div>
+<!-- card container end here -->
+
+<!-- Section 2 image and text start here -->
+<div class="flex flex-col mt-[70vh] lg:flex-row md:px-10 px-5" id="section2">
+    <div class="lg:w-[40%] w-full flex justify-center items-center">
+        <div class="h-80 w-80 border border-zinc-700/100 rounded-full flex justify-center items-center">
+            <div class="h-64 w-64 border border-zinc-700/100 rounded-full flex justify-center items-center">
+                <div class="h-44 w-44 border border-zinc-700/100 rounded-full flex justify-center items-center">
+                    <img class="" src="{% static 'img/notebook-iso-gradient.png' %}" alt="notebook-iso-gradient.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lg:w-[60%] w-full text-white">
+        <h1 class="text-5xl my-10 font-bold">Library of 2000+ Stories</h1>
+        <p class="text-2xl">Access a vast collection of unique stories with full copyright transfer for further
+            development. Unlock a wealth of creative possibilities and seamlessly transform your next blockbuster
+            screenplay from these stories.
+        </p>
+    </div>
+</div>
+
+<!-- Section 2 image and text end here -->
+
+<!-- Section 3 para section start here -->
+
+<div class="md:w-[60%] m-auto px-5 my-10 text-white">
+    <p class="text-lg font-normal">If you are looking for a way to implement creativity and unique storytelling with just a few clicks, then look no further than NolanAI. Unlock efficiency for your team in an instant.
+    </p>
+    <p class="text-lg font-normal">For more details, contact us.</p>
+    <p class="text-lg font-normal">Join NolanAI Enterprise.</p>
+    <h3 class="text-center text-3xl text-orange-500 font-bold py-8">enterprise @ nolanai.app</h3>
+</div>
+{% endblock content %}

@@ -1,0 +1,134 @@
+{% load static %}
+<style>
+  .popup {
+    position: fixed;
+    z-index: 1;
+    left: 24px;
+    top: 50px;
+right:24px;
+    width: 520px;
+    height: auto;
+margin: 0 auto;
+font-size: 14px;
+    
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+
+}
+
+.popup-content button {
+    display: block;
+    margin: 0 auto;
+}
+.show {
+    display: block;
+}
+</style>
+<header class="fixed-top z-50 left-0 right-0 top-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 py-3">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'core:home' %}">
+          <img src="{% static 'img/logo.svg' %}" alt="logo">
+        </a>
+  
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'core:about' %}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'core:pricing' %}">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'core:for_studios' %}">For Studios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'core:features' %}">Features</a>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link btn" id="myButton">Create Script</button>
+            </li>
+            <div id="myPopup" class="popup">
+                <div class="modal fade" id="createScriptModal" tabindex="-1" aria-labelledby="createScriptModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content bg-white rounded-lg">
+                            <div class="modal-header justify-content-between px-5 py-4 text-black/80 text-xl font-bold border-bottom">
+                                <h1 class="modal-title" id="createScriptModalLabel">Create a new script</h1>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                    <span class="material-symbols-outlined text-blue-700 text-base font-bold">close</span>
+                                </button>
+                            </div>
+                            <div class="modal-body text-base">
+                                <p class="text-gray-600 px-5 py-6">Select the format you want to write a script for:</p>
+                
+                                <div class="border rounded-xl my-4 d-flex justify-content-center cursor-pointer mx-5 align-items-center">
+                                    <input type="radio" name="scriptFormat" id="film" class="w-5 h-5 mx-3">
+                                    <div class="flex flex-column justify-content-center items-start px-3 py-2">
+                                        <label for="film" class="text-lg font-bold">Feature Film</label>
+                                        <p class="font-normal text-sm">Begin crafting your feature film screenplay with the assistance of Co-Pilot's power.</p>
+                                    </div>
+                                </div>
+                                <div class="border rounded-xl mb-5 d-flex justify-content-center cursor-pointer mx-5 align-items-center">
+                                    <input type="radio" name="scriptFormat" id="video" class="w-5 h-5 mx-3">
+                                    <div class="flex flex-column justify-content-center items-start px-3 py-2">
+                                        <label for="video" class="text-lg font-bold">Video Short</label>
+                                        <p class="font-normal text-sm">Take your video shorts to new heights by utilizing AI to craft your scripts in screenplay format.</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="modal-footer justify-content-between px-5 my-5">
+                                    <a href="{% url 'core:home' %}" class="btn btn-outline-primary">Cancel</a>
+                                    <a href="{% url 'core:create_script' %}" class="btn btn-primary">Next →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'core:blog' %}">Blog</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-primary" href="{% url 'account_logout' %}">Log out</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-primary" href="{% url 'account_login' %}">Log in</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+
+<script>
+  $(document).ready(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        $(".navbar").addClass("scrolled");
+      } else {
+        $(".navbar").removeClass("scrolled");
+      }
+    });
+  });
+</script>
+<script>
+  myButton.addEventListener("click", function () {
+      myPopup.classList.add("show");
+  });
+  closePopup.addEventListener("click", function () {
+      myPopup.classList.remove("show");
+  });
+  window.addEventListener("click", function (event) {
+      if (event.target == myPopup) {
+          myPopup.classList.remove("show");
+      }
+  });
+</script>
