@@ -21,6 +21,9 @@
 ## Download all Requirements
 
 ``` pip install -r requirements.txt ```
+## Creat an .env file 
+Generate you <a href="https://platform.openai.com/api-keys" target="_blank" >API KEY </a>
+```CHATGPT_KEY= add_your_api_key ```
 
 ## Make database
 
