@@ -4,4 +4,4 @@
 [![Project Demo](http://img.youtube.com/vi/cR3qgOs66xw/0.jpg)](http://www.youtube.com/watch?v=cR3qgOs66xw)
 
 ## Home page
-![Home apge of Nolanaiapp](./assets/output/home.jpg)
+<img src="./assets/output/home.jpg" alt="Home apge of Nolanaiapp" width="50%"/>
