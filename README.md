@@ -31,4 +31,4 @@
 ``` python manage.py runserver ```
 
 ## Home page
-<img src="./assets/output/home.jpg" alt="Home apge of Nolanaiapp" width="50%"/>
+<img src="./assets/output/home.jpg" alt="Home apge of Nolanaiapp" height="50%"/>
