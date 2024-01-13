@@ -12,7 +12,7 @@
 <a href="https://github.com/git-for-windows/git/releases/download/v2.43.0.windows.1/Git-2.43.0-64-bit.exe" target="_blank" >Download</a>
 
 ## Git Clone 
-''' git clone https://github.com/EshaanManchanda/Nolanai.app_Clone.git .'''
+``` git clone https://github.com/EshaanManchanda/Nolanai.app_Clone.git . ```
 
 ## Home page
 <img src="./assets/output/home.jpg" alt="Home apge of Nolanaiapp" width="50%"/>
