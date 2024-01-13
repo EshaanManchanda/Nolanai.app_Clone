@@ -66,10 +66,10 @@ def query(request):
     response = openai.Completion.create(
         engine="davinci-002",
         prompt=request,
-        max_tokens=1000,
+        max_tokens=1500,
         n=1,
         stop=None,
-        temperature=0.2
+        temperature=0.5
     )
     #print(response)
 
